@@ -13,14 +13,6 @@ export class User {
 
   @Prop()
   driveExperience: string;
-
-  @Prop()
-  passport: number;
-
-  @Prop()
-  driveLicence:number;
-
-  
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);

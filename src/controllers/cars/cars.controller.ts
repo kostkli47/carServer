@@ -7,7 +7,7 @@ export class CarsController {
     constructor(private carsService: CarsService) {}
  
  
-    @Get()
+    @Get() 
     getCars(): Promise<Cars[]> {
         return this.carsService.getCars();
     }
