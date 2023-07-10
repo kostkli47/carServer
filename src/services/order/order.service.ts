@@ -12,4 +12,12 @@ export class OrderService {
         const orderData = new this.orderModel(data);
         return orderData.save()
     }
+
+    async orderRegUser(carBrand:string, startRentDate: string, endRentDate:string): Promise<Order[]> {
+        return this.orderModel.find({startRentDate: startRentDate, carBrand }, {endRentDate: endRentDate, carBrand});
+    }
+
+    async deleteOrders(): Promise<any> {
+        return this.orderModel.deleteMany()
+    } 
 }
